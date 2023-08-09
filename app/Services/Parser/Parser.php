@@ -14,12 +14,10 @@ class Parser
         }
     }
 
-    public function parseAllSources()
+    public function parseAllSources(): void
     {
         foreach ($this->parsers as $parser) {
             $parser->parse();
-
-            sleep(rand(1,3));
         }
     }
 }
